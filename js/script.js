@@ -5,12 +5,15 @@ button.addEventListener("click",function(){
     for (let i = 0; i < 100; i++) {
         let casellaGriglia = creaCasella(i+1)
         grid.appendChild(casellaGriglia);
+        casellaGriglia.addEventListener("click",function(){
+            this.classList.toggle("click");
+        })
     }
 })
 
-function creaCasella(numeroCasella){
+function creaCasella(numero){
     let casella = document.createElement('div');
     casella.classList.add("casella");
-    casella.innerText = numeroCasella ;
+    casella.innerText = numero;
     return casella;
 }
