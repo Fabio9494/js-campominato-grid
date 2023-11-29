@@ -7,6 +7,7 @@ button.addEventListener("click",function(){
         grid.appendChild(casellaGriglia);
         casellaGriglia.addEventListener("click",function(){
             this.classList.toggle("click");
+            console.log("casella numero: " + this.outerText);
         })
     }
 })
